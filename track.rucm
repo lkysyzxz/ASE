@@ -2819,6 +2819,66 @@
             }
           },
           "type": "UseCase"
+        },
+        {
+          "content": {
+            "useCase": "&8",
+            "description": {
+              "content": "",
+              "type": "<string>"
+            },
+            "name": {
+              "content": "",
+              "type": "<string>"
+            },
+            "actor": "&1"
+          },
+          "type": "Relationship"
+        },
+        {
+          "content": {
+            "useCase": "&9",
+            "description": {
+              "content": "",
+              "type": "<string>"
+            },
+            "name": {
+              "content": "",
+              "type": "<string>"
+            },
+            "actor": "&1"
+          },
+          "type": "Relationship"
+        },
+        {
+          "content": {
+            "useCase": "&10",
+            "description": {
+              "content": "",
+              "type": "<string>"
+            },
+            "name": {
+              "content": "",
+              "type": "<string>"
+            },
+            "actor": "&1"
+          },
+          "type": "Relationship"
+        },
+        {
+          "content": {
+            "useCase": "&11",
+            "description": {
+              "content": "",
+              "type": "<string>"
+            },
+            "name": {
+              "content": "",
+              "type": "<string>"
+            },
+            "actor": "&3"
+          },
+          "type": "Relationship"
         }
       ],
       "description": {
@@ -3028,32 +3088,16 @@
           "links": [
             {
               "content": {
-                "relationship": "&8",
-                "node1": "&9",
-                "node2": "&10"
+                "relationship": "&12",
+                "node1": "&13",
+                "node2": "&14"
               },
               "type": "UCDRelationshipLink"
             },
             {
               "content": {
-                "relationship": "&11",
-                "node1": "&12",
-                "node2": "&13"
-              },
-              "type": "UCDRelationshipLink"
-            },
-            {
-              "content": {
-                "relationship": "&14",
-                "node1": "&9",
-                "node2": "&15"
-              },
-              "type": "UCDRelationshipLink"
-            },
-            {
-              "content": {
-                "relationship": "&16",
-                "node1": "&9",
+                "relationship": "&15",
+                "node1": "&16",
                 "node2": "&17"
               },
               "type": "UCDRelationshipLink"
@@ -3061,7 +3105,7 @@
             {
               "content": {
                 "relationship": "&18",
-                "node1": "&9",
+                "node1": "&13",
                 "node2": "&19"
               },
               "type": "UCDRelationshipLink"
@@ -3069,56 +3113,72 @@
             {
               "content": {
                 "relationship": "&20",
-                "node1": "&9",
+                "node1": "&13",
                 "node2": "&21"
               },
               "type": "UCDRelationshipLink"
             },
             {
               "content": {
-                "node1": "&17",
-                "node2": "&15",
-                "include": "&22"
+                "relationship": "&22",
+                "node1": "&13",
+                "node2": "&23"
               },
-              "type": "UCDIncludeLink"
-            },
-            {
-              "content": {
-                "node1": "&19",
-                "node2": "&21",
-                "include": "&23"
-              },
-              "type": "UCDIncludeLink"
+              "type": "UCDRelationshipLink"
             },
             {
               "content": {
                 "relationship": "&24",
-                "node1": "&12",
-                "node2": "&17"
+                "node1": "&13",
+                "node2": "&25"
               },
               "type": "UCDRelationshipLink"
             },
             {
               "content": {
-                "relationship": "&25",
-                "node1": "&12",
-                "node2": "&19"
-              },
-              "type": "UCDRelationshipLink"
-            },
-            {
-              "content": {
-                "node1": "&17",
-                "node2": "&10",
+                "node1": "&21",
+                "node2": "&19",
                 "include": "&26"
               },
               "type": "UCDIncludeLink"
             },
             {
               "content": {
-                "node1": "&19",
-                "node2": "&10",
+                "node1": "&23",
+                "node2": "&25",
                 "include": "&27"
+              },
+              "type": "UCDIncludeLink"
+            },
+            {
+              "content": {
+                "relationship": "&28",
+                "node1": "&16",
+                "node2": "&21"
+              },
+              "type": "UCDRelationshipLink"
+            },
+            {
+              "content": {
+                "relationship": "&29",
+                "node1": "&16",
+                "node2": "&23"
+              },
+              "type": "UCDRelationshipLink"
+            },
+            {
+              "content": {
+                "node1": "&21",
+                "node2": "&14",
+                "include": "&30"
+              },
+              "type": "UCDIncludeLink"
+            },
+            {
+              "content": {
+                "node1": "&23",
+                "node2": "&14",
+                "include": "&31"
               },
               "type": "UCDIncludeLink"
             }
@@ -3143,6 +3203,10 @@
     {"path": "<root>.modelElements[8]"},
     {"path": "<root>.modelElements[10]"},
     {"path": "<root>.modelElements[12]"},
+    {"path": "<root>.modelElements[16]"},
+    {"path": "<root>.modelElements[18]"},
+    {"path": "<root>.modelElements[17]"},
+    {"path": "<root>.modelElements[19]"},
     {"path": "<root>.modelElements[3]"},
     {"path": "<root>.diagrams[0].nodes[0]"},
     {"path": "<root>.diagrams[0].nodes[2]"},
