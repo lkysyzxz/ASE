@@ -1,0 +1,1176 @@
+{
+  "lmf.version": "1.1",
+  "reference": [
+    {"path": "<root>.modelElements[0]"},
+    {"path": "<root>.modelElements[2]"},
+    {"path": "<root>.modelElements[1]"},
+    {"path": "<root>.modelElements[4]"},
+    {"path": "<root>.modelElements[6]"},
+    {"path": "<root>.modelElements[8]"},
+    {"path": "<root>.modelElements[12]"},
+    {"path": "<root>.modelElements[10]"},
+    {"path": "<root>.diagrams[0].nodes[2]"},
+    {"path": "<root>.modelElements[3]"},
+    {"path": "<root>.diagrams[0].nodes[0]"},
+    {"path": "<root>.diagrams[0].nodes[3]"},
+    {"path": "<root>.modelElements[5]"},
+    {"path": "<root>.diagrams[0].nodes[1]"},
+    {"path": "<root>.diagrams[0].nodes[4]"},
+    {"path": "<root>.modelElements[7]"},
+    {"path": "<root>.diagrams[0].nodes[5]"},
+    {"path": "<root>.modelElements[9]"},
+    {"path": "<root>.diagrams[0].nodes[6]"},
+    {"path": "<root>.modelElements[11]"},
+    {"path": "<root>.diagrams[0].nodes[7]"},
+    {"path": "<root>.modelElements[13]"},
+    {"path": "<root>.modelElements[8].include[0]"},
+    {"path": "<root>.modelElements[10].include[0]"},
+    {"path": "<root>.modelElements[14]"},
+    {"path": "<root>.modelElements[15]"},
+    {"path": "<root>.modelElements[8].include[1]"},
+    {"path": "<root>.modelElements[10].include[1]"}
+  ],
+  "root": {
+    "type": "UCModel",
+    "content": {
+      "name": {
+        "type": "<string>",
+        "content": ""
+      },
+      "modelElements": [
+        {
+          "type": "Actor",
+          "content": {
+            "name": {
+              "type": "<string>",
+              "content": "调度员"
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Actor",
+          "content": {
+            "name": {
+              "type": "<string>",
+              "content": "列车司机"
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "UseCase",
+          "content": {
+            "name": {
+              "type": "<string>",
+              "content": "发送调度命令"
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Relationship",
+          "content": {
+            "actor": "&0",
+            "useCase": "&1",
+            "name": {
+              "type": "<string>",
+              "content": ""
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "UseCase",
+          "content": {
+            "name": {
+              "type": "<string>",
+              "content": "接收调度命令"
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Relationship",
+          "content": {
+            "actor": "&2",
+            "useCase": "&3",
+            "name": {
+              "type": "<string>",
+              "content": ""
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "UseCase",
+          "content": {
+            "name": {
+              "type": "<string>",
+              "content": "查看站台占用情况"
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Relationship",
+          "content": {
+            "actor": "&0",
+            "useCase": "&4",
+            "name": {
+              "type": "<string>",
+              "content": ""
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "UseCase",
+          "content": {
+            "include": [
+              {
+                "type": "Include",
+                "content": {
+                  "name": {
+                    "type": "<string>",
+                    "content": ""
+                  },
+                  "description": {
+                    "type": "<string>",
+                    "content": ""
+                  },
+                  "addition": "&4",
+                  "includingCase": "&5"
+                }
+              },
+              {
+                "type": "Include",
+                "content": {
+                  "name": {
+                    "type": "<string>",
+                    "content": ""
+                  },
+                  "description": {
+                    "type": "<string>",
+                    "content": ""
+                  },
+                  "addition": "&1",
+                  "includingCase": "&5"
+                }
+              }
+            ],
+            "name": {
+              "type": "<string>",
+              "content": "控制列车进站"
+            },
+            "specification": {
+              "type": "UseCaseSpecification",
+              "content": {
+                "secondaryActors": ["&2"],
+                "alternativeFlows": [
+                  {
+                    "type": "SpecificAlternative",
+                    "content": {
+                      "postCondition": {
+                        "type": "PostCondition",
+                        "content": {
+                          "sentences": [{
+                            "type": "Sentence",
+                            "content": {
+                              "name": {
+                                "type": "<string>",
+                                "content": ""
+                              },
+                              "description": {
+                                "type": "<string>",
+                                "content": ""
+                              },
+                              "content": {
+                                "type": "<string>",
+                                "content": "未办理对应接车进路"
+                              }
+                            }
+                          }],
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          }
+                        }
+                      },
+                      "rfsSentence": {
+                        "type": "Sentence",
+                        "content": {
+                          "natures": [{
+                            "type": "RFSNature",
+                            "content": {
+                              "flowName": {
+                                "type": "<string>",
+                                "content": ""
+                              },
+                              "segments": [{
+                                "type": "RFSNatureSegment",
+                                "content": {
+                                  "toStep": {
+                                    "type": "<int>",
+                                    "content": 2
+                                  },
+                                  "fromStep": {
+                                    "type": "<int>",
+                                    "content": 2
+                                  }
+                                }
+                              }]
+                            }
+                          }],
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "RFS 2"
+                          }
+                        }
+                      },
+                      "name": {
+                        "type": "<string>",
+                        "content": "查看对应接车进路"
+                      },
+                      "description": {
+                        "type": "<string>",
+                        "content": ""
+                      },
+                      "steps": [{
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "调度员熄灭对应进站信号机灯光并点亮红色灯光"
+                          }
+                        }
+                      }]
+                    }
+                  },
+                  {
+                    "type": "SpecificAlternative",
+                    "content": {
+                      "postCondition": {
+                        "type": "PostCondition",
+                        "content": {
+                          "sentences": [{
+                            "type": "Sentence",
+                            "content": {
+                              "name": {
+                                "type": "<string>",
+                                "content": ""
+                              },
+                              "description": {
+                                "type": "<string>",
+                                "content": ""
+                              },
+                              "content": {
+                                "type": "<string>",
+                                "content": "列车需经停该站"
+                              }
+                            }
+                          }],
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          }
+                        }
+                      },
+                      "rfsSentence": {
+                        "type": "Sentence",
+                        "content": {
+                          "natures": [{
+                            "type": "RFSNature",
+                            "content": {
+                              "flowName": {
+                                "type": "<string>",
+                                "content": ""
+                              },
+                              "segments": [{
+                                "type": "RFSNatureSegment",
+                                "content": {
+                                  "toStep": {
+                                    "type": "<int>",
+                                    "content": 6
+                                  },
+                                  "fromStep": {
+                                    "type": "<int>",
+                                    "content": 6
+                                  }
+                                }
+                              }]
+                            }
+                          }],
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "RFS 6"
+                          }
+                        }
+                      },
+                      "name": {
+                        "type": "<string>",
+                        "content": "查看列车是否经停该站"
+                      },
+                      "description": {
+                        "type": "<string>",
+                        "content": ""
+                      },
+                      "steps": [{
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "办理轨道调车作业"
+                          }
+                        }
+                      }]
+                    }
+                  }
+                ],
+                "name": {
+                  "type": "<string>",
+                  "content": ""
+                },
+                "description": {
+                  "type": "<string>",
+                  "content": ""
+                },
+                "primaryActor": "&0",
+                "preCondition": {
+                  "type": "PreCondition",
+                  "content": {
+                    "sentences": [{
+                      "type": "Sentence",
+                      "content": {
+                        "name": {
+                          "type": "<string>",
+                          "content": ""
+                        },
+                        "description": {
+                          "type": "<string>",
+                          "content": ""
+                        },
+                        "content": {
+                          "type": "<string>",
+                          "content": "轨道信号灯控制系统"
+                        }
+                      }
+                    }],
+                    "name": {
+                      "type": "<string>",
+                      "content": ""
+                    },
+                    "description": {
+                      "type": "<string>",
+                      "content": ""
+                    }
+                  }
+                },
+                "basicFlow": {
+                  "type": "BasicFlow",
+                  "content": {
+                    "name": {
+                      "type": "<string>",
+                      "content": "列车进站流程"
+                    },
+                    "description": {
+                      "type": "<string>",
+                      "content": ""
+                    },
+                    "steps": [
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "列车接近车站"
+                          }
+                        }
+                      },
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "natures": [{
+                            "type": "ValidateThatNature",
+                            "content": {
+                              "subject": {
+                                "type": "<string>",
+                                "content": "调度员"
+                              },
+                              "object": {
+                                "type": "<string>",
+                                "content": "查看对应接车进路"
+                              }
+                            }
+                          }],
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "调度员 VALIDATES THAT 查看对应接车进路"
+                          }
+                        }
+                      },
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "操作员办理接车进路"
+                          }
+                        }
+                      },
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "接车进路锁闭后，进站信号机点亮相应允许灯光，对应进路出站信号机点亮红色灯光。"
+                          }
+                        }
+                      },
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "列车接近车站并越过点亮的进站信号机，进站信号机点亮红灯，接车进路解锁后进站信号机灯光熄灭。"
+                          }
+                        }
+                      },
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "natures": [{
+                            "type": "ValidateThatNature",
+                            "content": {
+                              "subject": {
+                                "type": "<string>",
+                                "content": "调度员"
+                              },
+                              "object": {
+                                "type": "<string>",
+                                "content": "列车是否经停该站"
+                              }
+                            }
+                          }],
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "调度员 VALIDATES THAT 列车是否经停该站"
+                          }
+                        }
+                      },
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "列车即将进入股道闭塞区间，对应调车信号机点亮白色灯光，轨道侧向出站信号机点亮红色灯光"
+                          }
+                        }
+                      },
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "调车车列越过调车信号机，把那个出清接近区段，调车信号机点亮蓝色灯光"
+                          }
+                        }
+                      },
+                      {
+                        "type": "Sentence",
+                        "content": {
+                          "name": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "description": {
+                            "type": "<string>",
+                            "content": ""
+                          },
+                          "content": {
+                            "type": "<string>",
+                            "content": "调车车列完全进入轨道，对应调车进路解锁。"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "briefDescription": {
+                  "type": "BriefDescription",
+                  "content": {
+                    "sentences": [{
+                      "type": "Sentence",
+                      "content": {
+                        "name": {
+                          "type": "<string>",
+                          "content": ""
+                        },
+                        "description": {
+                          "type": "<string>",
+                          "content": ""
+                        },
+                        "content": {
+                          "type": "<string>",
+                          "content": "信号灯如何控制列车接车进站流程"
+                        }
+                      }
+                    }],
+                    "name": {
+                      "type": "<string>",
+                      "content": ""
+                    },
+                    "description": {
+                      "type": "<string>",
+                      "content": ""
+                    }
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Relationship",
+          "content": {
+            "actor": "&0",
+            "useCase": "&5",
+            "name": {
+              "type": "<string>",
+              "content": ""
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "UseCase",
+          "content": {
+            "include": [
+              {
+                "type": "Include",
+                "content": {
+                  "name": {
+                    "type": "<string>",
+                    "content": ""
+                  },
+                  "description": {
+                    "type": "<string>",
+                    "content": ""
+                  },
+                  "addition": "&6",
+                  "includingCase": "&7"
+                }
+              },
+              {
+                "type": "Include",
+                "content": {
+                  "name": {
+                    "type": "<string>",
+                    "content": ""
+                  },
+                  "description": {
+                    "type": "<string>",
+                    "content": ""
+                  },
+                  "addition": "&1",
+                  "includingCase": "&7"
+                }
+              }
+            ],
+            "name": {
+              "type": "<string>",
+              "content": "控制列车出站"
+            },
+            "specification": {
+              "type": "UseCaseSpecification",
+              "content": {
+                "name": {
+                  "type": "<string>",
+                  "content": ""
+                },
+                "description": {
+                  "type": "<string>",
+                  "content": ""
+                },
+                "basicFlow": {
+                  "type": "BasicFlow",
+                  "content": {
+                    "name": {
+                      "type": "<string>",
+                      "content": ""
+                    },
+                    "description": {
+                      "type": "<string>",
+                      "content": ""
+                    },
+                    "steps": [{
+                      "type": "Sentence",
+                      "content": {
+                        "name": {
+                          "type": "<string>",
+                          "content": ""
+                        },
+                        "description": {
+                          "type": "<string>",
+                          "content": ""
+                        },
+                        "content": {
+                          "type": "<string>",
+                          "content": ""
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Relationship",
+          "content": {
+            "actor": "&0",
+            "useCase": "&7",
+            "name": {
+              "type": "<string>",
+              "content": ""
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "UseCase",
+          "content": {
+            "name": {
+              "type": "<string>",
+              "content": "查看前方路段信息"
+            },
+            "specification": {
+              "type": "UseCaseSpecification",
+              "content": {
+                "name": {
+                  "type": "<string>",
+                  "content": ""
+                },
+                "description": {
+                  "type": "<string>",
+                  "content": ""
+                },
+                "basicFlow": {
+                  "type": "BasicFlow",
+                  "content": {
+                    "name": {
+                      "type": "<string>",
+                      "content": ""
+                    },
+                    "description": {
+                      "type": "<string>",
+                      "content": ""
+                    },
+                    "steps": [{
+                      "type": "Sentence",
+                      "content": {
+                        "name": {
+                          "type": "<string>",
+                          "content": ""
+                        },
+                        "description": {
+                          "type": "<string>",
+                          "content": ""
+                        },
+                        "content": {
+                          "type": "<string>",
+                          "content": ""
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Relationship",
+          "content": {
+            "actor": "&0",
+            "useCase": "&6",
+            "name": {
+              "type": "<string>",
+              "content": ""
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Relationship",
+          "content": {
+            "actor": "&2",
+            "useCase": "&5",
+            "name": {
+              "type": "<string>",
+              "content": ""
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        },
+        {
+          "type": "Relationship",
+          "content": {
+            "actor": "&2",
+            "useCase": "&7",
+            "name": {
+              "type": "<string>",
+              "content": ""
+            },
+            "description": {
+              "type": "<string>",
+              "content": ""
+            }
+          }
+        }
+      ],
+      "description": {
+        "type": "<string>",
+        "content": ""
+      },
+      "diagrams": [{
+        "type": "UCDiagram",
+        "content": {
+          "nodes": [
+            {
+              "type": "UCDActorNode",
+              "content": {
+                "actor": "&0",
+                "top": {
+                  "type": "<int>",
+                  "content": 127
+                },
+                "left": {
+                  "type": "<int>",
+                  "content": 681
+                },
+                "width": {
+                  "type": "<int>",
+                  "content": 105
+                },
+                "height": {
+                  "type": "<int>",
+                  "content": 98
+                }
+              }
+            },
+            {
+              "type": "UCDActorNode",
+              "content": {
+                "actor": "&2",
+                "top": {
+                  "type": "<int>",
+                  "content": 335
+                },
+                "left": {
+                  "type": "<int>",
+                  "content": 55
+                },
+                "width": {
+                  "type": "<int>",
+                  "content": 67
+                },
+                "height": {
+                  "type": "<int>",
+                  "content": 98
+                }
+              }
+            },
+            {
+              "type": "UCDUseCaseNode",
+              "content": {
+                "useCase": "&1",
+                "top": {
+                  "type": "<int>",
+                  "content": 332
+                },
+                "left": {
+                  "type": "<int>",
+                  "content": 484
+                },
+                "width": {
+                  "type": "<int>",
+                  "content": 140
+                },
+                "height": {
+                  "type": "<int>",
+                  "content": 70
+                }
+              }
+            },
+            {
+              "type": "UCDUseCaseNode",
+              "content": {
+                "useCase": "&3",
+                "top": {
+                  "type": "<int>",
+                  "content": 121
+                },
+                "left": {
+                  "type": "<int>",
+                  "content": 157
+                },
+                "width": {
+                  "type": "<int>",
+                  "content": 140
+                },
+                "height": {
+                  "type": "<int>",
+                  "content": 70
+                }
+              }
+            },
+            {
+              "type": "UCDUseCaseNode",
+              "content": {
+                "useCase": "&4",
+                "top": {
+                  "type": "<int>",
+                  "content": 317
+                },
+                "left": {
+                  "type": "<int>",
+                  "content": 323
+                },
+                "width": {
+                  "type": "<int>",
+                  "content": 140
+                },
+                "height": {
+                  "type": "<int>",
+                  "content": 70
+                }
+              }
+            },
+            {
+              "type": "UCDUseCaseNode",
+              "content": {
+                "useCase": "&5",
+                "top": {
+                  "type": "<int>",
+                  "content": 94
+                },
+                "left": {
+                  "type": "<int>",
+                  "content": 453
+                },
+                "width": {
+                  "type": "<int>",
+                  "content": 140
+                },
+                "height": {
+                  "type": "<int>",
+                  "content": 70
+                }
+              }
+            },
+            {
+              "type": "UCDUseCaseNode",
+              "content": {
+                "useCase": "&7",
+                "top": {
+                  "type": "<int>",
+                  "content": 499
+                },
+                "left": {
+                  "type": "<int>",
+                  "content": 498
+                },
+                "width": {
+                  "type": "<int>",
+                  "content": 140
+                },
+                "height": {
+                  "type": "<int>",
+                  "content": 70
+                }
+              }
+            },
+            {
+              "type": "UCDUseCaseNode",
+              "content": {
+                "useCase": "&6",
+                "top": {
+                  "type": "<int>",
+                  "content": 501
+                },
+                "left": {
+                  "type": "<int>",
+                  "content": 821
+                },
+                "width": {
+                  "type": "<int>",
+                  "content": 140
+                },
+                "height": {
+                  "type": "<int>",
+                  "content": 70
+                }
+              }
+            }
+          ],
+          "name": {
+            "type": "<string>",
+            "content": "列车进出站"
+          },
+          "links": [
+            {
+              "type": "UCDRelationshipLink",
+              "content": {
+                "node2": "&8",
+                "relationship": "&9",
+                "node1": "&10"
+              }
+            },
+            {
+              "type": "UCDRelationshipLink",
+              "content": {
+                "node2": "&11",
+                "relationship": "&12",
+                "node1": "&13"
+              }
+            },
+            {
+              "type": "UCDRelationshipLink",
+              "content": {
+                "node2": "&14",
+                "relationship": "&15",
+                "node1": "&10"
+              }
+            },
+            {
+              "type": "UCDRelationshipLink",
+              "content": {
+                "node2": "&16",
+                "relationship": "&17",
+                "node1": "&10"
+              }
+            },
+            {
+              "type": "UCDRelationshipLink",
+              "content": {
+                "node2": "&18",
+                "relationship": "&19",
+                "node1": "&10"
+              }
+            },
+            {
+              "type": "UCDRelationshipLink",
+              "content": {
+                "node2": "&20",
+                "relationship": "&21",
+                "node1": "&10"
+              }
+            },
+            {
+              "type": "UCDIncludeLink",
+              "content": {
+                "include": "&22",
+                "node2": "&14",
+                "node1": "&16"
+              }
+            },
+            {
+              "type": "UCDIncludeLink",
+              "content": {
+                "include": "&23",
+                "node2": "&20",
+                "node1": "&18"
+              }
+            },
+            {
+              "type": "UCDRelationshipLink",
+              "content": {
+                "node2": "&16",
+                "relationship": "&24",
+                "node1": "&13"
+              }
+            },
+            {
+              "type": "UCDRelationshipLink",
+              "content": {
+                "node2": "&18",
+                "relationship": "&25",
+                "node1": "&13"
+              }
+            },
+            {
+              "type": "UCDIncludeLink",
+              "content": {
+                "include": "&26",
+                "node2": "&8",
+                "node1": "&16"
+              }
+            },
+            {
+              "type": "UCDIncludeLink",
+              "content": {
+                "include": "&27",
+                "node2": "&8",
+                "node1": "&18"
+              }
+            }
+          ]
+        }
+      }]
+    }
+  }
+}
