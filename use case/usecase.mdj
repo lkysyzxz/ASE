@@ -4924,7 +4924,7 @@
 											"top": 515.5,
 											"width": 83,
 											"height": 13,
-											"text": "发布调度指令"
+											"text": "获取运行图"
 										},
 										{
 											"_type": "LabelView",
@@ -4957,7 +4957,7 @@
 									"font": "Arial;13;0",
 									"left": 459.5,
 									"top": 508.5,
-									"width": 94,
+									"width": 93,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFmwB07+4UhKuw="
@@ -8205,7 +8205,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFmvp5zd5+Td6M="
 					},
-					"name": "发布调度指令"
+					"name": "获取运行图"
 				},
 				{
 					"_type": "UMLUseCase",
