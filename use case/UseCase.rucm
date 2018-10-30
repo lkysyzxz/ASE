@@ -111,7 +111,7 @@
                       {
                         "content": {
                           "content": {
-                            "content": "列车驶入一个行车区间",
+                            "content": "司机驾驶列车驶入一个行车区间",
                             "type": "<string>"
                           },
                           "description": {
@@ -128,7 +128,24 @@
                       {
                         "content": {
                           "content": {
-                            "content": "调度系统根据列车进入区间的信号，根据四显示闭塞规则，生成信号灯信号序列，发送给信号灯",
+                            "content": "调度系统接收到列车进入行车区间的信号",
+                            "type": "<string>"
+                          },
+                          "description": {
+                            "content": "",
+                            "type": "<string>"
+                          },
+                          "name": {
+                            "content": "",
+                            "type": "<string>"
+                          }
+                        },
+                        "type": "Sentence"
+                      },
+                      {
+                        "content": {
+                          "content": {
+                            "content": "调度系统根据四显示闭塞规则，生成信号灯信号序列，发送给信号灯",
                             "type": "<string>"
                           },
                           "description": {
@@ -275,7 +292,7 @@
               "type": "<string>"
             },
             "name": {
-              "content": "获取信号灯状态",
+              "content": "查看信号灯状态",
               "type": "<string>"
             },
             "specification": {
@@ -341,22 +358,77 @@
                       {
                         "content": {
                           "content": {
-                            "content": "司机VALIDATES THAT 信号灯状态有效（如果为FALSE，转到alt1）",
+                            "content": "IF 司机发现信号灯状态正常 THEN",
                             "type": "<string>"
                           },
-                          "natures": [{
-                            "content": {
-                              "subject": {
-                                "content": "司机",
-                                "type": "<string>"
-                              },
-                              "object": {
-                                "content": "信号灯状态有效（如果为FALSE，转到alt1）",
-                                "type": "<string>"
-                              }
-                            },
-                            "type": "ValidateThatNature"
-                          }],
+                          "description": {
+                            "content": "",
+                            "type": "<string>"
+                          },
+                          "name": {
+                            "content": "",
+                            "type": "<string>"
+                          }
+                        },
+                        "type": "Sentence"
+                      },
+                      {
+                        "content": {
+                          "content": {
+                            "content": "司机按照规则控制列车行驶",
+                            "type": "<string>"
+                          },
+                          "description": {
+                            "content": "",
+                            "type": "<string>"
+                          },
+                          "name": {
+                            "content": "",
+                            "type": "<string>"
+                          }
+                        },
+                        "type": "Sentence"
+                      },
+                      {
+                        "content": {
+                          "content": {
+                            "content": "ELSEIF 司机发现信号灯出现故障 THEN",
+                            "type": "<string>"
+                          },
+                          "description": {
+                            "content": "",
+                            "type": "<string>"
+                          },
+                          "name": {
+                            "content": "",
+                            "type": "<string>"
+                          }
+                        },
+                        "type": "Sentence"
+                      },
+                      {
+                        "content": {
+                          "content": {
+                            "content": "司机按故障状态规则控制列车行驶",
+                            "type": "<string>"
+                          },
+                          "description": {
+                            "content": "",
+                            "type": "<string>"
+                          },
+                          "name": {
+                            "content": "",
+                            "type": "<string>"
+                          }
+                        },
+                        "type": "Sentence"
+                      },
+                      {
+                        "content": {
+                          "content": {
+                            "content": "ENDIF",
+                            "type": "<string>"
+                          },
                           "description": {
                             "content": "",
                             "type": "<string>"
@@ -440,124 +512,6 @@
                   "content": "",
                   "type": "<string>"
                 },
-                "alternativeFlows": [{
-                  "content": {
-                    "postCondition": {
-                      "content": {
-                        "description": {
-                          "content": "",
-                          "type": "<string>"
-                        },
-                        "name": {
-                          "content": "",
-                          "type": "<string>"
-                        },
-                        "sentences": [{
-                          "content": {
-                            "content": {
-                              "content": "信号灯故障",
-                              "type": "<string>"
-                            },
-                            "description": {
-                              "content": "",
-                              "type": "<string>"
-                            },
-                            "name": {
-                              "content": "",
-                              "type": "<string>"
-                            }
-                          },
-                          "type": "Sentence"
-                        }]
-                      },
-                      "type": "PostCondition"
-                    },
-                    "description": {
-                      "content": "",
-                      "type": "<string>"
-                    },
-                    "name": {
-                      "content": "",
-                      "type": "<string>"
-                    },
-                    "rfsSentence": {
-                      "content": {
-                        "content": {
-                          "content": "RFS 2",
-                          "type": "<string>"
-                        },
-                        "natures": [{
-                          "content": {
-                            "segments": [{
-                              "content": {
-                                "toStep": {
-                                  "content": 2,
-                                  "type": "<int>"
-                                },
-                                "fromStep": {
-                                  "content": 2,
-                                  "type": "<int>"
-                                }
-                              },
-                              "type": "RFSNatureSegment"
-                            }],
-                            "flowName": {
-                              "content": "",
-                              "type": "<string>"
-                            }
-                          },
-                          "type": "RFSNature"
-                        }],
-                        "description": {
-                          "content": "",
-                          "type": "<string>"
-                        },
-                        "name": {
-                          "content": "",
-                          "type": "<string>"
-                        }
-                      },
-                      "type": "Sentence"
-                    },
-                    "steps": [
-                      {
-                        "content": {
-                          "content": {
-                            "content": "司机减速行驶",
-                            "type": "<string>"
-                          },
-                          "description": {
-                            "content": "",
-                            "type": "<string>"
-                          },
-                          "name": {
-                            "content": "",
-                            "type": "<string>"
-                          }
-                        },
-                        "type": "Sentence"
-                      },
-                      {
-                        "content": {
-                          "content": {
-                            "content": "司机向调度员汇报信号灯故障信息",
-                            "type": "<string>"
-                          },
-                          "description": {
-                            "content": "",
-                            "type": "<string>"
-                          },
-                          "name": {
-                            "content": "",
-                            "type": "<string>"
-                          }
-                        },
-                        "type": "Sentence"
-                      }
-                    ]
-                  },
-                  "type": "SpecificAlternative"
-                }],
                 "primaryActor": "&3"
               },
               "type": "UseCaseSpecification"
